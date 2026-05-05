@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brincus - Estrategia de Crecimiento Personalizada</title>
+  <meta property="og:title" content="Brincus - Estrategia de Crecimiento Personalizada">
+  <meta property="og:description" content="Un audit y estrategia de crecimiento construidos especificamente para Brincus por Copy Estratega.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://danigdecelis.github.io/factor-rh-strategy/logo-ca.png">
+  <link rel="icon" type="image/png" href="https://storage.googleapis.com/gpt-engineer-file-uploads/ENnY1cQr8yb82cqirDaLRejSItf1/uploads/1759866240739-LeadLinker%20Logo%20Favicon%20.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold:        #C9A84C;
+      --gold-dark:   #A8893A;
+      --gold-light:  rgba(201,168,76,0.08);
+      --gold-border: rgba(201,168,76,0.2);
+      --dark:        #0A0A0A;
+      --dark-mid:    #1A1A1A;
+      --body-text:   #555555;
+      --muted:       #999999;
+      --off-white:   #F8F6F0;
+      --white:       #FFFFFF;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--body-text);
+      background: var(--white);
+    }
+
+    /* ===================== NAV ===================== */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      background: rgba(10,10,10,0.97);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(201,168,76,0.15);
+      padding: 0 40px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav img { height: 48px; }
+    .nav-cta {
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      background: transparent;
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-cta:hover { background: var(--gold); color: var(--dark); }
+
+    /* ===================== SECTIONS ===================== */
+    .card { padding: 80px 40px; border-bottom: 1px solid rgba(0,0,0,0.05); }
+    .card.dark { background: var(--dark); border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .card.off-white { background: var(--off-white); }
+    .card.white { background: var(--white); }
+    .container { max-width: 800px; margin: 0 auto; }
+
+    /* ===================== TYPOGRAPHY ===================== */
+    .section-label {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+    h1, h2 { font-family: 'Playfair Display', serif; }
+    h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+    }
+    h2 {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+    h3 { font-size: 20px; font-weight: 700; color: var(--dark-mid); margin-bottom: 10px; }
+    h4 { font-size: 15px; font-weight: 700; color: var(--dark-mid); margin-bottom: 6px; }
+    p { margin-bottom: 16px; }
+    p:last-child { margin-bottom: 0; }
+
+    .dark h1, .dark h2, .dark h3 { color: #FFFFFF; }
+    .dark p, .dark li { color: rgba(255,255,255,0.7); }
+    .dark .section-label { color: var(--gold); }
+    .white h2, .off-white h2 { color: var(--dark-mid); }
+    .white h3, .off-white h3 { color: var(--dark-mid); }
+
+    /* ===================== HERO (CARD 1) ===================== */
+    .hero-card {
+      padding-top: 144px;
+    }
+    .hero-card h1 { color: #FFFFFF; margin-bottom: 32px; }
+
+    .alert-box {
+      background: var(--gold);
+      color: var(--dark);
+      font-size: 18px;
+      font-weight: 700;
+      padding: 18px 40px;
+      border-radius: 4px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .video-placeholder {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 10px;
+      padding: 64px 40px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .video-placeholder p { color: rgba(255,255,255,0.4); font-size: 14px; }
+
+    /* TOC */
+    .toc { margin-top: 48px; }
+    .toc-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,168,76,0.12);
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-bottom: 8px;
+      transition: border-color 0.2s;
+    }
+    .toc-item:hover { border-color: rgba(201,168,76,0.35); }
+    .toc-num {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--gold);
+      letter-spacing: 2px;
+      min-width: 24px;
+      padding-top: 2px;
+    }
+    .toc-title { font-size: 15px; font-weight: 700; color: #FFFFFF; margin-bottom: 2px; }
+    .toc-desc { font-size: 13px; color: rgba(255,255,255,0.5); }
+
+    /* ===================== FINDINGS GRID ===================== */
+    .findings-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .finding-card {
+      background: var(--off-white);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 10px;
+      padding: 22px 20px;
+    }
+    .off-white .finding-card { background: var(--white); }
+    .dark .finding-card {
+      background: rgba(255,255,255,0.04);
+      border-color: rgba(255,255,255,0.08);
+    }
+    .finding-card h4 { font-size: 15px; font-weight: 700; color: var(--dark-mid); margin-bottom: 6px; }
+    .dark .finding-card h4 { color: #FFFFFF; }
+    .finding-card p { font-size: 14px; color: var(--body-text); line-height: 1.6; margin: 0; }
+    .dark .finding-card p { color: rgba(255,255,255,0.6); }
+
+    /* ===================== AUDIT INTRO ===================== */
+    .audit-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 32px;
+    }
+    .audit-block h3 { color: var(--dark-mid); margin-bottom: 10px; }
+
+    /* ===================== URL CHIP ===================== */
+    .url-chip {
+      display: inline-block;
+      background: var(--gold-light);
+      border: 1px solid var(--gold-border);
+      border-radius: 4px;
+      padding: 6px 14px;
+      font-size: 13px;
+      color: var(--gold-dark);
+      font-weight: 600;
+      margin-bottom: 28px;
+      word-break: break-all;
+    }
+
+    /* ===================== TRANSITION (CARD 8) ===================== */
+    .transition-card { text-align: center; padding: 60px 40px; }
+    .transition-card h2 { color: var(--gold); font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 12px; }
+    .transition-card h3 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 4vw, 40px); font-weight: 700; color: #FFFFFF; margin-bottom: 16px; }
+    .transition-card p { color: rgba(255,255,255,0.6); max-width: 560px; margin: 0 auto; }
+
+    /* ===================== BUYER JOURNEY ===================== */
+    .journey {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin: 32px 0;
+    }
+    .journey-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .journey-step:last-child { border-bottom: none; }
+    .journey-circle {
+      width: 36px;
+      height: 36px;
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--gold);
+      flex-shrink: 0;
+      background: var(--dark);
+    }
+    .white .journey-circle, .off-white .journey-circle { background: transparent; }
+    .journey-label { font-size: 14px; font-weight: 700; color: var(--dark-mid); margin-bottom: 4px; }
+    .journey-desc { font-size: 14px; color: var(--body-text); line-height: 1.6; }
+    .journey-closing {
+      background: var(--gold-light);
+      border-left: 3px solid var(--gold);
+      border-radius: 4px;
+      padding: 16px 20px;
+      margin-top: 24px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--dark-mid);
+    }
+
+    /* ===================== SUPPORT ITEMS (P2 columns) ===================== */
+    .support-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+      margin: 28px 0;
+    }
+    .support-item {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 20px 18px;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .support-item h4 { font-size: 14px; font-weight: 700; color: var(--dark-mid); margin-bottom: 6px; }
+    .support-item p { font-size: 13px; color: var(--body-text); line-height: 1.6; margin: 0; }
+
+    /* ===================== STATS (CARD 12) ===================== */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      margin-top: 40px;
+    }
+    .stat-block {
+      background: rgba(255,255,255,0.04);
+      padding: 40px 28px;
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 6px;
+    }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 5vw, 52px);
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .stat-lbl { font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.85); margin-bottom: 6px; }
+    .stat-desc { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.6; }
+    .stats-closing {
+      margin-top: 36px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.7);
+      font-style: italic;
+    }
+
+    /* ===================== LEAD MAGNETS ===================== */
+    .lm-list { margin-top: 32px; display: flex; flex-direction: column; gap: 16px; }
+    .lm-card {
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 10px;
+      padding: 24px 22px;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      background: var(--white);
+    }
+    .off-white .lm-card { background: var(--off-white); }
+    .lm-card.featured {
+      border-color: var(--gold);
+      background: var(--gold-light);
+    }
+    .lm-num {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: var(--gold);
+      min-width: 28px;
+      padding-top: 3px;
+    }
+    .lm-card.featured .lm-num {
+      background: var(--gold);
+      color: var(--dark);
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      flex-shrink: 0;
+      min-width: unset;
+      padding-top: 0;
+    }
+    .lm-title { font-size: 15px; font-weight: 700; color: var(--dark-mid); margin-bottom: 6px; }
+    .lm-desc { font-size: 14px; color: var(--body-text); line-height: 1.6; margin: 0; }
+
+    /* ===================== EXAMPLE PAGE PREVIEW ===================== */
+    .preview-card {
+      display: block;
+      text-decoration: none;
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 36px;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+    .preview-card:hover {
+      border-color: var(--gold);
+      box-shadow: 0 8px 32px rgba(201,168,76,0.15);
+      transform: translateY(-4px);
+    }
+    .preview-hero {
+      background: linear-gradient(160deg, #FFFFFF 0%, #EDE7F6 60%, #D7C9F0 100%);
+      padding: 40px;
+      min-height: 200px;
+    }
+    .preview-badge {
+      display: inline-block;
+      background: #FE990D;
+      color: white;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+    .preview-h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: #3A1F65;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+    .preview-h1 em { font-style: normal; color: #FE990D; }
+    .preview-form {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      max-width: 280px;
+      margin-top: 16px;
+      box-shadow: 0 4px 20px rgba(58,31,101,0.12);
+    }
+    .preview-input {
+      background: #F5F5F5;
+      border-radius: 6px;
+      height: 28px;
+      margin-bottom: 6px;
+      width: 100%;
+    }
+    .preview-btn {
+      background: #00C853;
+      border-radius: 20px;
+      height: 32px;
+      width: 100%;
+    }
+    .preview-bar {
+      background: var(--off-white);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+    .preview-url { font-size: 12px; color: var(--muted); font-weight: 500; }
+    .preview-link { font-size: 13px; font-weight: 700; color: var(--gold); display: flex; align-items: center; gap: 4px; }
+
+    /* ===================== WHAT ELSE (CARD 15) ===================== */
+    .build-item { margin-bottom: 40px; }
+    .build-item:last-child { margin-bottom: 0; }
+    .build-num {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .build-item h3 { color: var(--dark-mid); margin-bottom: 14px; }
+    .email-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .email-list li {
+      display: flex;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--body-text);
+      align-items: flex-start;
+    }
+    .email-num {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--gold);
+      background: var(--gold-light);
+      border: 1px solid var(--gold-border);
+      border-radius: 4px;
+      padding: 2px 8px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .bullet-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .bullet-list li {
+      display: flex;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--body-text);
+      align-items: flex-start;
+      padding: 10px 14px;
+      background: var(--off-white);
+      border-radius: 6px;
+    }
+    .white .bullet-list li { background: var(--off-white); }
+    .bullet-dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; flex-shrink: 0; margin-top: 6px; }
+
+    /* ===================== GUARANTEE (CARD 16) ===================== */
+    .guarantee-box {
+      background: var(--gold-light);
+      border: 1px solid var(--gold-border);
+      border-radius: 10px;
+      padding: 28px 24px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .guarantee-box p { font-size: 18px; font-weight: 700; color: var(--dark-mid); margin: 0; line-height: 1.5; }
+    .steps-list { display: flex; flex-direction: column; gap: 0; }
+    .step-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .off-white .step-item { border-bottom-color: rgba(0,0,0,0.06); }
+    .step-item:last-child { border-bottom: none; }
+    .step-num {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--gold);
+      min-width: 32px;
+      line-height: 1.4;
+    }
+    .step-who {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .step-title { font-size: 16px; font-weight: 700; color: var(--dark-mid); margin-bottom: 4px; }
+    .step-desc { font-size: 14px; color: var(--body-text); line-height: 1.6; }
+    .guarantee-repeat {
+      margin-top: 32px;
+      padding: 20px;
+      background: var(--gold-light);
+      border-left: 3px solid var(--gold);
+      border-radius: 4px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--dark-mid);
+      font-style: italic;
+    }
+
+    /* ===================== CTA (CARDS 17 + 20) ===================== */
+    .cta-card {
+      text-align: center;
+      padding: 80px 40px;
+      border-top: 1px solid rgba(201,168,76,0.3);
+    }
+    .cta-card h2 { color: #FFFFFF; margin-bottom: 12px; }
+    .cta-card .lead { color: rgba(255,255,255,0.65); font-size: 17px; margin-bottom: 40px; }
+    .cta-options { display: flex; flex-direction: column; gap: 20px; align-items: center; max-width: 400px; margin: 0 auto; }
+    .cta-email-text { font-size: 16px; color: rgba(255,255,255,0.7); }
+    .cta-email-text strong { color: #FFFFFF; }
+    .cta-divider {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      color: rgba(255,255,255,0.25);
+    }
+    .btn-calendly {
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      background: transparent;
+      padding: 14px 36px;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-calendly:hover { background: var(--gold); color: var(--dark); }
+
+    /* ===================== FAQS ===================== */
+    .faq-list { margin-top: 32px; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 10px;
+      padding: 22px 22px;
+      background: var(--off-white);
+    }
+    .white .faq-item { background: var(--off-white); }
+    .faq-item h4 { font-size: 15px; font-weight: 700; color: var(--dark-mid); margin-bottom: 8px; }
+    .faq-item p { font-size: 14px; color: var(--body-text); line-height: 1.7; margin: 0; }
+
+    /* ===================== ABOUT ===================== */
+    .about-card {
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 10px;
+      padding: 36px 32px;
+      display: flex;
+      gap: 28px;
+      align-items: flex-start;
+      margin-top: 32px;
+    }
+    .off-white .about-card { background: var(--off-white); }
+    .about-photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .about-name { font-size: 18px; font-weight: 700; color: var(--dark-mid); margin-bottom: 2px; }
+    .about-title { font-size: 14px; color: var(--muted); margin-bottom: 14px; }
+    .about-links { display: flex; gap: 16px; margin-bottom: 16px; }
+    .about-link { font-size: 13px; color: var(--gold); font-weight: 600; text-decoration: none; }
+    .about-link:hover { text-decoration: underline; }
+    .about-bio { font-size: 14px; color: var(--body-text); line-height: 1.7; margin: 0; }
+
+    /* ===================== FOOTER ===================== */
+    footer {
+      background: var(--dark);
+      border-top: 1px solid rgba(201,168,76,0.15);
+      padding: 40px;
+      text-align: center;
+    }
+    footer img { height: 36px; margin-bottom: 14px; }
+    footer p { font-size: 13px; color: rgba(255,255,255,0.4); }
+
+    /* ===================== RESPONSIVE ===================== */
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      nav img { height: 36px; }
+      .card { padding: 56px 20px; }
+      .hero-card { padding-top: 120px; }
+      .cta-card { padding: 56px 20px; }
+      .findings-grid { grid-template-columns: 1fr; }
+      .audit-cols { grid-template-columns: 1fr; gap: 24px; }
+      .support-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .about-card { flex-direction: column; }
+      footer { padding: 32px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <img src="https://danigdecelis.github.io/factor-rh-strategy/logo-ca.png" alt="Copy Estratega">
+  <button class="nav-cta" onclick="Calendly.initPopupWidget({url:'https://calendly.com/danigdecelis/meeting'});return false;">Agenda una Llamada</button>
+</nav>
+
+<!-- CARD 1: HERO + VIDEO (dark) -->
+<section class="card dark hero-card">
+  <div class="container">
+    <span class="section-label">Estrategia Personalizada</span>
+    <h1>Brincus</h1>
+    <p style="color:rgba(255,255,255,0.6); font-size:18px; margin-bottom:40px;">Estrategia de Crecimiento Personalizada</p>
+
+    <div class="alert-box">&#128680; No Te Saltes El Video De Arriba &#128680;</div>
+
+    <div class="video-placeholder">
+      <p>Video personalizado proximamente.<br>Mientras tanto, desplazate para ver el audit completo.</p>
+    </div>
+
+    <div class="toc">
+      <div class="toc-item">
+        <span class="toc-num">01</span>
+        <div><p class="toc-title">El Audit</p><p class="toc-desc">Lo que encontramos en tu LinkedIn, sitio web y anuncios</p></div>
+      </div>
+      <div class="toc-item">
+        <span class="toc-num">02</span>
+        <div><p class="toc-title">Los Problemas</p><p class="toc-desc">Lo que te esta costando leads en este momento</p></div>
+      </div>
+      <div class="toc-item">
+        <span class="toc-num">03</span>
+        <div><p class="toc-title">Los Numeros</p><p class="toc-desc">Lo que esa fuga cuesta cada mes</p></div>
+      </div>
+      <div class="toc-item">
+        <span class="toc-num">04</span>
+        <div><p class="toc-title">Lead Magnets Sugeridos</p><p class="toc-desc">Ideas especificas para capturar emails y construir tu pipeline</p></div>
+      </div>
+      <div class="toc-item">
+        <span class="toc-num">05</span>
+        <div><p class="toc-title">La Pagina de Ejemplo</p><p class="toc-desc">Una version reconstruida de tu pagina de captacion, ya construida para vosotros</p></div>
+      </div>
+      <div class="toc-item">
+        <span class="toc-num">06</span>
+        <div><p class="toc-title">Que Mas Construiriamos</p><p class="toc-desc">El funnel completo detras de la pagina</p></div>
+      </div>
+      <div class="toc-item">
+        <span class="toc-num">07</span>
+        <div><p class="toc-title">Nuestra Oferta Especial y Garantia</p><p class="toc-desc">Como garantizamos los resultados</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARD 2: INTRO (white) -->
+<section class="card white">
+  <div class="container">
+    <p style="font-size:20px; font-weight:500; color:var(--dark-mid); line-height:1.7;">Este documento fue construido especificamente para <strong>Brincus</strong>. Cada hallazgo, cada recomendacion y cada ejemplo se basa en vuestro sitio web real, vuestros anuncios activos y vuestro funnel actual.</p>
+  </div>
+</section>
+
+<!-- CARD 4: AUDIT INTRO (white) -->
+<section class="card white">
+  <div class="container">
+    <span class="section-label">El Audit</span>
+    <h2>Hola Matias, mi nombre es Daniel</h2>
+    <div class="audit-cols">
+      <div class="audit-block">
+        <h3>Quienes Somos</h3>
+        <p>Soy el fundador de Copy Estratega. Trabajamos con consultores y expertos que ya tienen la metodologia, los resultados y la autoridad, pero todavia no tienen el sistema digital que convierte eso en clientes nuevos de forma predecible. Construimos y operamos sistemas de captacion completos: paginas de lead magnet, secuencias de email, y estrategias multicanal que llenan el pipeline de forma constante.</p>
+      </div>
+      <div class="audit-block">
+        <h3>Como Te Encontre</h3>
+        <p>Encontre Brincus en LinkedIn y en vuestro sitio web. Tras investigar a fondo encontre varias cosas que merecian ser compartidas con vosotros.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARD 5: LINKEDIN (off-white) -->
+<section class="card off-white">
+  <div class="container">
+    <span class="section-label">Paso 1</span>
+    <h2>Tu LinkedIn</h2>
+    <span class="url-chip">linkedin.com/in/matias-gonzalez-duarte</span>
+    <p style="color:var(--muted); font-size:14px; font-weight:600; margin-bottom:20px;">Lo que encontre:</p>
+    <div class="findings-grid">
+      <div class="finding-card">
+        <h4>Perfil de Fundador Con Autoridad Real</h4>
+        <p>Matias tiene un perfil solido con credenciales academicas verificables (Ingenieria Comercial + Master en Innovacion y Emprendimiento en la UAI) y una narrativa de fundador clara. El perfil refuerza la confianza en el proyecto.</p>
+      </div>
+      <div class="finding-card">
+        <h4>Validacion Institucional Prominente</h4>
+        <p>Forbes 100 Mejores Startups 2024, Start-Up Chile IGNITE y GROWTH 2025, y Rockstart aparecen asociados al proyecto. Son senales de terceros que generan credibilidad inmediata con padres que investigan antes de inscribir a sus hijos.</p>
+      </div>
+      <div class="finding-card">
+        <h4>Financiamiento Que Habla de Traccion</h4>
+        <p>$411K USD levantados con inversores de peso, incluyendo Daniel Undurraga, co-fundador de Cornershop, mas un grant de CORFO de $35K. Esto no es una idea en papel. Es una empresa validada por el mercado de capital.</p>
+      </div>
+      <div class="finding-card">
+        <h4>Alcance Digital Que Todavia No Se Monetiza Bien</h4>
+        <p>39.000 seguidores en Instagram, 81 anuncios activos en Google, y presencia en TikTok. La audiencia y la traccion estan ahi. Lo que falta es el sistema que convierte ese alcance en una base de datos propia y predecible.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARD 6: WEBSITE (white) -->
+<section class="card white">
+  <div class="container">
+    <span class="section-label">Paso 2</span>
+    <h2>Tu Sitio Web</h2>
+    <span class="url-chip">home2.brincus.com</span>
+    <p style="color:var(--muted); font-size:14px; font-weight:600; margin-bottom:20px;">Lo que esta funcionando:</p>
+    <div class="findings-grid">
+      <div class="finding-card">
+        <h4>Plataforma Propia Desarrollada a Medida</h4>
+        <p>Brincus no corre sobre WordPress ni Shopify. Tiene una plataforma tecnologica propia, lo que significa control total y capacidad de escalar sin depender de terceros. Eso es una ventaja competitiva real.</p>
+      </div>
+      <div class="finding-card">
+        <h4>Propuesta de Valor Diferenciada</h4>
+        <p>"Un colegio donde tu hijo aprende con calma, comprension y acompanamiento real" conecta directamente con el dolor del padre. No es marketing generico: habla a una emocion especifica.</p>
+      </div>
+      <div class="finding-card">
+        <h4>Stat de Resultado Muy Potente</h4>
+        <p>El 98% de aprobacion en el examen libre oficial es un numero que cierra objeciones antes de que el padre las haga. Es el tipo de prueba social que genera confianza inmediata.</p>
+      </div>
+      <div class="finding-card">
+        <h4>Blog Activo Con Contenido Educativo</h4>
+        <p>La presencia de un blog indica inversion en contenido y potencial de trafico organico. Es la base sobre la que se puede construir una estrategia de SEO y nutricion de largo plazo.</p>
+      </div>
+      <div class="finding-card" style="grid-column: 1 / -1;">
+        <h4>Integracion Con Calendly y WhatsApp</h4>
+        <p>Existe un camino para que el visitante interesado tome accion. No es un sitio estatico: hay mecanismos de contacto activos que facilitan el primer paso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARD 7: ADS + TECH (off-white) -->
+<section class="card off-white">
+  <div class="container">
+    <span class="section-label">Paso 3</span>
+    <h2>Tus Anuncios y Tecnologia</h2>
+    <span class="url-chip">adstransparency.google.com/?domain=brincus.com</span>
+    <p style="color:var(--muted); font-size:14px; font-weight:600; margin-bottom:20px;">Lo que encontre:</p>
+    <div class="findings-grid">
+      <div class="finding-card">
+        <h4>81 Anuncios Activos en Google</h4>
+        <p>Everest Edtech SpA (entidad legal verificada por Google) tiene 81 variantes activas: busqueda, display y video. Copy visible: "un colegio donde tu hijo aprende con calma." Inversion de ads real y continua.</p>
+      </div>
+      <div class="finding-card">
+        <h4>Facebook Pixel Confirmado</h4>
+        <p>El Facebook Pixel esta instalado y activo. Hay infraestructura de retargeting lista, pero sin una pagina de captura de leads, el pixel no tiene a quien rastrear ni a quien impactar de vuelta con precision.</p>
+      </div>
+      <div class="finding-card">
+        <h4>Sin Plataforma de Email Detectada</h4>
+        <p>No se detecto ninguna plataforma de email marketing en el codigo fuente. No hay scripts de Mailchimp, ActiveCampaign, ConvertKit ni equivalentes. Toda la comunicacion post-visita depende de que el usuario tome la iniciativa.</p>
+      </div>
+      <div class="finding-card">
+        <h4>Trafico de Pago Sin Destino Optimizado</h4>
+        <p>Los 81 anuncios envian trafico a la homepage general. No existe una landing page dedicada con lead magnet ni gate de email. Cada clic pagado llega a una pagina que no captura el dato mas valioso: el correo del padre.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARD 8: TRANSITION (dark) -->
+<section class="card dark transition-card">
+  <div class="container">
+    <h2>AUDIT COMPLETO</h2>
+    <h3>Los Problemas</h3>
+    <p>Ahora que sabemos lo que hay, aqui esta lo que esos hallazgos revelan sobre lo que te esta costando leads en este momento.</p>
+  </div>
+</section>
+
+<!-- CARD 9: PROBLEM 1 (white) -->
+<section class="card white">
+  <div class="container">
+    <span class="section-label">Problema 1</span>
+    <h2>81 Anuncios Activos. Cero Emails Capturados.</h2>
+    <p>Brincus tiene uno de los activos mas costosos del marketing digital: trafico de pago. Con 81 anuncios corriendo en Google, presencia organica en Instagram con 39K seguidores y Facebook Pixel instalado, hay una inversion real y continua en llevar familias interesadas al sitio. El problema es que ese trafico llega a una homepage generica que no tiene ninguna oferta de valor gratuita, ninguna razon para que el padre deje su email, y ningun mecanismo que lo retenga antes de que cierre la pestana y siga con su dia.</p>
+    <p style="font-weight:600; color:var(--dark-mid); margin-top:8px;">Asi es el recorrido del comprador hoy:</p>
+    <div class="journey">
+      <div class="journey-step">
+        <div class="journey-circle">1</div>
+        <div><p class="journey-label">Ve el anuncio o el post</p><p class="journey-desc">El padre ve el anuncio de Google o un Reel en Instagram. El mensaje conecta. Hace clic.</p></div>
+      </div>
+      <div class="journey-step">
+        <div class="journey-circle">2</div>
+        <div><p class="journey-label">Llega al sitio</p><p class="journey-desc">Aterriza en la homepage. Lee la propuesta. Le parece interesante. Navega un poco.</p></div>
+      </div>
+      <div class="journey-step">
+        <div class="journey-circle">3</div>
+        <div><p class="journey-label">No encuentra una oferta concreta para el</p><p class="journey-desc">El sitio no le ofrece nada gratuito y especifico para su situacion: ni una guia, ni un test, ni un recurso descargable. No hay razon urgente para dejar su email.</p></div>
+      </div>
+      <div class="journey-step">
+        <div class="journey-circle">4</div>
+        <div><p class="journey-label">Se va sin dejar datos</p><p class="journey-desc">Cierra la pestana. La vida sigue. Brincus no tiene forma de volver a contactarle. El clic de Google ya fue pagado.</p></div>
+      </div>
+    </div>
+    <div class="journey-closing">Cada padre que se va sin dejar su correo es dinero de ads que no se puede recuperar. Sin email, no hay seguimiento. Sin seguimiento, no hay matricula.</div>
+  </div>
+</section>
+
+<!-- CARD 10: PROBLEM 2 (off-white) -->
+<section class="card off-white">
+  <div class="container">
+    <span class="section-label">Problema 2</span>
+    <h2>La Experiencia Web No Esta a la Altura del Producto</h2>
+    <p>Brincus es un producto diferente: un colegio online acreditado, con metodologia propia, 98% de aprobacion en examen libre, y clientes corporativos del calibre de Banco de Chile. Pero el sitio web no transmite esa excelencia con la misma fuerza. La experiencia de navegacion es funcional, pero no esta a la altura de la decision que le estas pidiendo al padre que tome. Inscribir a un hijo en un colegio online es una decision emocional y de alta confianza. El sitio debe estar construido para ganar esa confianza paso a paso, no solo informar.</p>
+    <div class="support-grid">
+      <div class="support-item">
+        <h4>Sin Segmentacion Por Perfil de Familia</h4>
+        <p>Los tres perfiles de alumno de Brincus (ninos con TDAH, deportistas, familias homeschool) tienen dolores, objeciones y motivaciones completamente distintas. Una homepage unica le habla a todos y no le habla profundamente a ninguno.</p>
+      </div>
+      <div class="support-item">
+        <h4>Sin Nutricion Post-Visita</h4>
+        <p>Calendly y WhatsApp son CTAs de alta friccion: le piden al padre que tome una decision de contacto antes de estar listo. El padre que no esta listo para llamar hoy no tiene razon para volver manana.</p>
+      </div>
+      <div class="support-item">
+        <h4>Sin Prueba Social Segmentada</h4>
+        <p>El 98% es un numero poderoso, pero no hay historias de alumnos por perfil de familia ni testimonios que digan "yo tenia un hijo con TDAH y esto cambio su vida". La prueba social generica informa. La especifica convierte.</p>
+      </div>
+    </div>
+    <div class="journey-closing" style="margin-top:24px;">Un sitio que transmita la misma calidad que el producto vende convierte el mismo trafico en el doble de alumnos.</div>
+  </div>
+</section>
+
+<!-- CARD 11: PROBLEM 3 (white) -->
+<section class="card white">
+  <div class="container">
+    <span class="section-label">Problema 3</span>
+    <h2>Sin BBDD Propia, Todo el Trafico Es Alquilado</h2>
+    <span class="url-chip">home2.brincus.com</span>
+    <p>Brincus tiene 39.000 seguidores en Instagram, 81 anuncios activos en Google y un Facebook Pixel instalado. Pero ninguno de esos activos es tuyo de verdad. Instagram puede cambiar su algoritmo. Google puede subir el CPC. Si manana pausas los ads o Meta reduce el alcance organico, el flujo de familias interesadas se detiene. Lo que falta es el unico activo digital que te pertenece completamente y que crece con el tiempo: una base de datos propia de familias interesadas, segmentada por perfil, nurtureable a costo casi cero por email.</p>
+    <p style="font-weight:600; color:var(--dark-mid);">Lo que deberia existir:</p>
+    <ul class="bullet-list">
+      <li><span class="bullet-dot"></span>Una BBDD propia con emails captados a traves de lead magnets especificos para cada perfil de familia (TDAH, deportistas, homeschool)</li>
+      <li><span class="bullet-dot"></span>Secuencias de email automatizadas que convierten a los leads frios en calientes antes de pedirles la decision de matricula</li>
+      <li><span class="bullet-dot"></span>Retargeting de Facebook y Google apuntando a la landing de captura, no a la homepage</li>
+      <li><span class="bullet-dot"></span>Campanas de reactivacion para leads que se enfriaron en los primeros 60 dias</li>
+      <li><span class="bullet-dot"></span>Newsletter semanal con contenido educativo que mantiene a Brincus top of mind hasta que el padre este listo para dar el paso</li>
+    </ul>
+    <div class="journey-closing" style="margin-top:24px;">Una BBDD de emails propios vale mas que cualquier cuenta de redes sociales porque no depende de ningun algoritmo externo y se capitaliza con cada nuevo lead que entra al sistema.</div>
+  </div>
+</section>
+
+<!-- CARD 12: NUMBERS (dark) -->
+<section class="card dark">
+  <div class="container">
+    <span class="section-label">Los Numeros</span>
+    <h2>Lo Que Esa Fuga Cuesta Cada Mes</h2>
+    <p style="color:rgba(255,255,255,0.6); max-width:600px;">Con suscripciones de $45-90 USD al mes, incluso mejoras pequenas en la captacion generan impacto material en los ingresos. Todas las estimaciones se basan en benchmarks conservadores de EdTech B2C latinoamericano.</p>
+    <div class="stats-grid">
+      <div class="stat-block">
+        <p class="stat-num">0%</p>
+        <p class="stat-lbl">Tasa Actual de Captura de Email</p>
+        <p class="stat-desc">Ninguno de los visitantes que llegan a traves de los 81 anuncios activos de Google sale del sitio dejando su correo electronico. No hay lead magnet. No hay gate. El trafico pasa y se va.</p>
+      </div>
+      <div class="stat-block">
+        <p class="stat-num">$720</p>
+        <p class="stat-lbl">Valor de un Alumno en su Primer Ano</p>
+        <p class="stat-desc">A un promedio de $60 USD al mes, un alumno que permanece 12 meses representa $720 USD de ingresos recurrentes. 10 alumnos adicionales al mes = $7.200 USD/mes de MRR incremental.</p>
+      </div>
+      <div class="stat-block">
+        <p class="stat-num">25-40%</p>
+        <p class="stat-lbl">Tasa de Opt-in Con Landing de Lead Magnet</p>
+        <p class="stat-desc">Los benchmarks de EdTech B2C oscilan entre el 25% y el 40% de opt-in. Con 500 visitantes mensuales, eso son entre 125 y 200 nuevos emails al mes capturados que hoy se pierden sin dejar rastro.</p>
+      </div>
+      <div class="stat-block">
+        <p class="stat-num">81</p>
+        <p class="stat-lbl">Anuncios Corriendo Sin Destino Optimizado</p>
+        <p class="stat-desc">Cada uno de los 81 anuncios activos envian trafico a una pagina sin captura de email. El coste por clic se esta pagando, pero el retorno no se puede medir ni recuperar sin un email al que atribuir la conversion.</p>
+      </div>
+    </div>
+    <p class="stats-closing">Una sola semana adicional de alumnos nuevos gracias al sistema mas que cubre el coste total de construccion en el primer mes.</p>
+  </div>
+</section>
+
+<!-- CARD 13: LEAD MAGNETS (white) -->
+<section class="card white">
+  <div class="container">
+    <span class="section-label">Lead Magnets Sugeridos</span>
+    <h2>Cinco Ideas Para Brincus</h2>
+    <p>Basadas en lo que Brincus ya tiene o podria crear facilmente:</p>
+    <div class="lm-list">
+      <div class="lm-card featured">
+        <div class="lm-num">1</div>
+        <div>
+          <p class="lm-title">"Como saber si el colegio online es la mejor opcion para tu hijo: Guia para padres que consideran el cambio"</p>
+          <p class="lm-desc">Una guia de 6-8 paginas que aborda las dudas mas frecuentes de los padres antes de tomar la decision: como funciona el examen libre en Chile, como es el dia a dia de un alumno, que perfiles se benefician mas del modelo, y que esperar en los primeros 30 dias. Disenada para capturar al padre que investiga pero todavia no esta listo para llamar. <strong>Esta es la guia alrededor de la que esta construida la pagina de ejemplo mas abajo.</strong></p>
+        </div>
+      </div>
+      <div class="lm-card">
+        <span class="lm-num">02</span>
+        <div>
+          <p class="lm-title">"Test: Descubre si tu hijo es candidato ideal para el colegio online"</p>
+          <p class="lm-desc">Un quiz de 5-7 preguntas que segmenta al padre segun el perfil de su hijo (TDAH, deportista, bajo rendimiento, homeschool) y entrega un resultado personalizado. Genera segmentacion automatica de la BBDD desde el primer contacto.</p>
+        </div>
+      </div>
+      <div class="lm-card">
+        <span class="lm-num">03</span>
+        <div>
+          <p class="lm-title">"El proceso del Examen Libre en Chile: Lo que nadie te cuenta antes de que tu hijo lo rinda"</p>
+          <p class="lm-desc">Una guia especifica para familias que ya estan considerando el homeschooling. Captura leads de alta intension: padres que ya decidieron salir del sistema tradicional y buscan como hacerlo bien.</p>
+        </div>
+      </div>
+      <div class="lm-card">
+        <span class="lm-num">04</span>
+        <div>
+          <p class="lm-title">"Guia de actividades y horarios: Como es una semana real en Brincus"</p>
+          <p class="lm-desc">Un recurso visual y practico que muestra el dia a dia de un alumno. Reduce la incertidumbre del padre sobre "como funciona esto en la practica" antes de la llamada.</p>
+        </div>
+      </div>
+      <div class="lm-card">
+        <span class="lm-num">05</span>
+        <div>
+          <p class="lm-title">"Brincus para empresas: Como ofrecer educacion flexible como beneficio laboral"</p>
+          <p class="lm-desc">Una guia B2B dirigida a responsables de RRHH. Pensada para replicar el modelo ya validado con Banco de Chile, CMPC, COPEC y Softys.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARD 14: EXAMPLE PAGE (off-white) -->
+<section class="card off-white">
+  <div class="container">
+    <span class="section-label">La Pagina de Ejemplo</span>
+    <h2>No Solo Encontramos el Problema</h2>
+    <p style="font-size:20px; font-weight:600; color:var(--dark-mid);">Construimos la solucion.</p>
+    <p>Aqui esta una version reconstruida de la pagina de inicio de Brincus como una pagina dedicada de captacion de leads para el Lead Magnet 1.</p>
+
+    <a class="preview-card" href="https://danigdecelis.github.io/brincus-funnel/" target="_blank">
+      <div class="preview-hero">
+        <div class="preview-badge">Descarga Gratuita</div>
+        <p class="preview-h1">Si sientes que el colegio tradicional le esta <em>fallando a tu hijo,</em> esta guia es para ti.</p>
+        <div class="preview-form">
+          <div class="preview-input"></div>
+          <div class="preview-input"></div>
+          <div class="preview-btn"></div>
+        </div>
+      </div>
+      <div class="preview-bar">
+        <span class="preview-url">danigdecelis.github.io/brincus-funnel/</span>
+        <span class="preview-link">Ver Pagina en Vivo &#8594;</span>
+      </div>
+    </a>
+
+    <div style="margin-top:32px;">
+      <p style="font-size:14px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:1px; margin-bottom:12px;">Que cambia:</p>
+      <ul class="bullet-list">
+        <li><span class="bullet-dot"></span>Mismo branding de Brincus</li>
+        <li><span class="bullet-dot"></span>Misma propuesta de valor, mensaje reenfocado hacia la descarga de la guia</li>
+        <li><span class="bullet-dot"></span>Gate de email claro antes de entregar el recurso</li>
+        <li><span class="bullet-dot"></span>Boton CTA que convierte visitantes en leads</li>
+      </ul>
+    </div>
+
+    <div style="margin-top:28px; padding:20px; background:var(--white); border-radius:10px; border:1px solid rgba(0,0,0,0.08);">
+      <p style="font-size:13px; color:var(--muted); font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:12px;">En lugar de</p>
+      <p style="font-size:14px; color:var(--body-text); margin-bottom:16px;">Trafico desde 81 anuncios de Google a la homepage generica</p>
+      <p style="font-size:13px; color:var(--muted); font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:12px;">Creamos</p>
+      <p style="font-size:14px; color:var(--dark-mid); font-weight:600;">Trafico a landing page de lead magnet &#8594; Captura de Email &#8594; Secuencia de Nutricion &#8594; Decision de Matricula</p>
+    </div>
+  </div>
+</section>
+
+<!-- CARD 15: WHAT ELSE (white) -->
+<section class="card white">
+  <div class="container">
+    <span class="section-label">Que Mas Construiriamos</span>
+    <h2>El Sistema Completo</h2>
+
+    <div class="build-item">
+      <p class="build-num">Build 01</p>
+      <h3>Secuencias de Email Marketing - 6 Emails en 45 Dias</h3>
+      <ul class="email-list">
+        <li><span class="email-num">E1</span>Entrega la guia + bienvenida al mundo del colegio online con Brincus</li>
+        <li><span class="email-num">E2</span>"El dia a dia de un alumno: lo que tus hijos experimentan cada semana en Brincus"</li>
+        <li><span class="email-num">E3</span>Historia real de un alumno con TDAH o deportista que cambio su trayectoria academica</li>
+        <li><span class="email-num">E4</span>"Las 3 dudas mas comunes de los padres antes de inscribirse y como las resolvemos"</li>
+        <li><span class="email-num">E5</span>CTA suave: "Agenda una llamada de 15 minutos con nuestro equipo para resolver tus dudas"</li>
+        <li><span class="email-num">E6</span>Seguimiento final: "Todavia pensandolo? Estos padres estuvieron exactamente donde estas tu"</li>
+      </ul>
+    </div>
+
+    <div class="build-item">
+      <p class="build-num">Build 02</p>
+      <h3>Sistema de Captacion Multicanal</h3>
+      <ul class="bullet-list">
+        <li><span class="bullet-dot"></span>Actualizacion de los 81 anuncios de Google para enviar trafico a la landing de lead magnet en lugar de a la homepage</li>
+        <li><span class="bullet-dot"></span>Campana de Instagram con Reels y Stories conectados a la landing de captura</li>
+        <li><span class="bullet-dot"></span>Configuracion del Facebook Pixel para retargeting de visitantes que no convirtieron en la primera visita</li>
+        <li><span class="bullet-dot"></span>Automatizacion de WhatsApp post-descarga para seguimiento en las primeras 24 horas con mensaje personalizado segun perfil del hijo</li>
+      </ul>
+    </div>
+
+    <div class="build-item">
+      <p class="build-num">Build 03</p>
+      <h3>BBDD Propia Segmentada y Activable</h3>
+      <ul class="bullet-list">
+        <li><span class="bullet-dot"></span>Segmentacion automatica de la base de datos por perfil desde el primer contacto: TDAH, deportistas, homeschool, bajo rendimiento escolar</li>
+        <li><span class="bullet-dot"></span>Secuencias de email especificas por segmento con contenido y casos de exito relevantes para cada perfil de familia</li>
+        <li><span class="bullet-dot"></span>Campanas de reactivacion para leads frios que no convirtieron en los primeros 60 dias</li>
+        <li><span class="bullet-dot"></span>Newsletter semanal educativo que mantiene a Brincus top of mind y genera nuevas oportunidades de conversion entre familias que todavia no estan listas</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CARD 16: GUARANTEE (off-white) -->
+<section class="card off-white">
+  <div class="container">
+    <span class="section-label">Nuestra Oferta Especial y Garantia</span>
+    <h2>Como Garantizamos los Resultados</h2>
+
+    <div class="guarantee-box">
+      <p>Sistema activo en 30 dias y generando leads calificados en 60 o antes. Si no lo logramos, seguimos trabajando sin coste hasta que lo logremos.</p>
+    </div>
+
+    <p style="font-weight:600; color:var(--dark-mid); margin-bottom:20px;">Aqui esta exactamente como funciona:</p>
+    <div class="steps-list">
+      <div class="step-item">
+        <span class="step-num">1</span>
+        <div>
+          <p class="step-who">Los Dos</p>
+          <p class="step-title">Llamada Inicial</p>
+          <p class="step-desc">Planificamos el sistema completo juntos. Kickoff en 7 a 10 dias habiles.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <span class="step-num">2</span>
+        <div>
+          <p class="step-who">Tu</p>
+          <p class="step-title">Compartes Acceso</p>
+          <p class="step-desc">Plataforma, activos de marca y credenciales del email.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <span class="step-num">3</span>
+        <div>
+          <p class="step-who">Nosotros Para Ti</p>
+          <p class="step-title">Landing Page de Lead Magnet Construida y en Vivo</p>
+          <p class="step-desc">Ya construida. En vivo en danigdecelis.github.io/brincus-funnel/</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <span class="step-num">4</span>
+        <div>
+          <p class="step-who">Nosotros Para Ti</p>
+          <p class="step-title">Secuencia de 6 Emails Cargada en el Sistema</p>
+          <p class="step-desc">Redactada y configurada en tu plataforma de email lista para activarse.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <span class="step-num">5</span>
+        <div>
+          <p class="step-who">Nosotros Para Ti</p>
+          <p class="step-title">Actualizacion de Campanas y Canales de Captacion</p>
+          <p class="step-desc">Los 81 anuncios de Google y las campanas de Instagram apuntando a la nueva landing de lead magnet.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <span class="step-num">6</span>
+        <div>
+          <p class="step-who">Nosotros Para Ti</p>
+          <p class="step-title">BBDD Segmentada Configurada y Lista para Crecer</p>
+          <p class="step-desc">Segmentacion por perfil activada desde el primer opt-in. Sistema de reactivacion listo.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <span class="step-num">7</span>
+        <div>
+          <p class="step-who">Nosotros Para Ti</p>
+          <p class="step-title">Todo Entregado Listo para Lanzar</p>
+          <p class="step-desc">Cero trabajo extra de tu parte.</p>
+        </div>
+      </div>
+    </div>
+    <div class="guarantee-repeat">Si el sistema no esta activo en 30 dias y generando leads en 60, seguimos trabajando sin coste hasta que lo logremos.</div>
+  </div>
+</section>
+
+<!-- CARD 17: CTA (dark) -->
+<section class="card dark cta-card">
+  <div class="container">
+    <span class="section-label">Listo Para Avanzar?</span>
+    <h2>Arrancamos Cuando Quieras</h2>
+    <p class="lead">La pagina de ejemplo ya esta construida y es vuestra independientemente de lo que decidais.</p>
+    <div class="cta-options">
+      <p class="cta-email-text">Responde directamente al mensaje que te envie y arrancamos la conversacion de inmediato.</p>
+      <span class="cta-divider">O</span>
+      <button class="btn-calendly" onclick="Calendly.initPopupWidget({url:'https://calendly.com/danigdecelis/meeting'});return false;">&#128197; Agenda una Llamada</button>
+    </div>
+  </div>
+</section>
+
+<!-- CARD 18: FAQS (white) -->
+<section class="card white">
+  <div class="container">
+    <span class="section-label">Preguntas Frecuentes</span>
+    <h2>Lo Que Suelen Preguntar</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h4>Es esto hecho por vosotros completamente?</h4>
+        <p>Si. Nos encargamos de todo desde la construccion hasta el lanzamiento. Tu revisas, apruebas, y nosotros lo ponemos en vivo.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Que incluye el engagement completo?</h4>
+        <p>La landing page de lead magnet ya construida, la secuencia de 6 emails redactada y cargada, la actualizacion de las campanas de Google Ads e Instagram para enviar trafico a la nueva landing, la configuracion del sistema de segmentacion de la BBDD, y el sistema de retargeting con Facebook Pixel.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Cuanto tiempo lleva comenzar?</h4>
+        <p>Kickoff en 7 a 10 dias habiles tras nuestra primera llamada.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Que necesitais de nuestra parte?</h4>
+        <p>Acceso a la plataforma de email, los activos de marca de Brincus y las credenciales de las campanas de Google Ads.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Cuanto cuesta?</h4>
+        <p>Hablamos de la inversion en la llamada. La pagina de ejemplo ya esta construida y es vuestra independientemente de lo que decidais.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Cual es la garantia?</h4>
+        <p>Sistema activo en 30 dias y generando leads calificados en 60 o antes. Si no lo logramos, seguimos trabajando sin coste hasta que lo logremos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARD 19: ABOUT (off-white) -->
+<section class="card off-white">
+  <div class="container">
+    <span class="section-label">Sobre Daniel</span>
+    <h2>Quien Hay Detras de Esto</h2>
+    <div class="about-card">
+      <img class="about-photo" src="https://danigdecelis.github.io/factor-rh-strategy/daniel-photo.png" alt="Daniel Garcia de Celis">
+      <div>
+        <p class="about-name">Daniel Garcia de Celis</p>
+        <p class="about-title">Fundador, Copy Estratega</p>
+        <div class="about-links">
+          <a class="about-link" href="https://calendly.com/danigdecelis/meeting" target="_blank">Agenda una llamada</a>
+        </div>
+        <p class="about-bio">Copy Estratega trabaja con consultores y expertos que ya tienen la metodologia, los resultados y la autoridad, pero todavia no tienen el sistema digital que convierte eso en clientes nuevos de forma predecible.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARD 20: FINAL CTA (dark) -->
+<section class="card dark cta-card">
+  <div class="container">
+    <span class="section-label">Arrancamos?</span>
+    <h2>El Sistema Ya Esta Construido.<br>Solo Falta Activarlo.</h2>
+    <p class="lead">Responde al mensaje o agenda una llamada. En 7 a 10 dias habiles estamos en marcha.</p>
+    <div class="cta-options">
+      <p class="cta-email-text">Responde directamente al mensaje que te envie y arrancamos la conversacion de inmediato.</p>
+      <span class="cta-divider">O</span>
+      <button class="btn-calendly" onclick="Calendly.initPopupWidget({url:'https://calendly.com/danigdecelis/meeting'});return false;">&#128197; Agenda una Llamada</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="https://danigdecelis.github.io/factor-rh-strategy/logo-ca.png" alt="Copy Estratega">
+  <p>2026 Copy Estratega. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
